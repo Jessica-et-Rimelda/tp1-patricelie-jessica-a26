@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using AppConsole;
+using AppConsole.Affichage;
 
-public class Program()
-{
-    public static void Main(string[] args)
-    {
-
-    }
-}
+new GestionCarte().Demarrer();
