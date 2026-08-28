@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Console/ConsoleApp.csproj" />
+  <Project Path="Modeles/Modeles.csproj" />
+</Solution>
