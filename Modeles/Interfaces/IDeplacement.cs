@@ -6,5 +6,6 @@ namespace Modeles.Interfaces
 {
     public class IDeplacement
     {
+        public void Deplacement();
     }
 }

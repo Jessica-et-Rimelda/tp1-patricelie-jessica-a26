@@ -28,10 +28,11 @@ public class Carte
                     .Select(e => e.Symbole)
                     .FirstOrDefault() ?? ".";
 
-                if(symbole != ".")
+                if (symbole != ".")
                 {
                   Console.ForegroundColor = ConsoleColor.DarkGreen;
                 }
+
                 Console.Write($"[{symbole}]");
             }
 

@@ -6,5 +6,6 @@ namespace Modeles.Interfaces
 {
     public interface ICommunication
     {
+        void Parler();
     }
 }
