@@ -29,7 +29,7 @@ public class MenuSelection
 
             var symboleEntite = entite switch
             {
-                Vaisseau => "C",
+                Vaisseau => "N",
                 NovaSolara => "N",
                 VerbaAstre => "V",
                 _ => ""
@@ -56,7 +56,7 @@ public class MenuSelection
         Console.ForegroundColor = ConsoleColor.Gray;
         Console.WriteLine("\n[TAB]  Changer d'entite");
         Console.WriteLine("[←→↑↓] Déplacer");
-        Console.WriteLine("[M]     Envoyer un message");
+
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("[Q]    Quitter");
 

@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Modeles.Interfaces;
 
-namespace Modeles.Interfaces
+/// <summary>
+/// Représente une entité capable de se déplacer.
+/// </summary>
+public interface IDeplacement
 {
-    public class IDeplacement
-    {
-    }
+    /// <summary>
+    /// Déplace l'entité selon les valeurs X et Y reçues.
+    /// </summary>
+    /// <param name="x">Déplacement horizontal.</param>
+    /// <param name="y">Déplacement vertical.</param>
+    void Deplacer(int x, int y);
 }

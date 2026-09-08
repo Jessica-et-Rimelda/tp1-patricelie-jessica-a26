@@ -1,5 +1,10 @@
 ﻿using AppConsole.Affichage;
 using AppConsole.Interactions;
+using Modeles.Entites;
+using Modeles.Entites.Astres;
+using Modeles.Entites.Vaisseaux;
+using Modeles.Galaxies;
+using Modeles.Interfaces;
 
 namespace AppConsole;
 
@@ -13,21 +18,27 @@ public class GestionCarte
     private readonly MenuSelection _menu = new();
     private readonly SelectionEntite _selection = new();
 
-    /*
-    private readonly List<ElementCarte> _entites =
-    [
-        new ElementCarte("CryptoVaisseau", "C", 1, 1),
-        new ElementCarte("NovaSolara", "N", 5, 3),
-        new ElementCarte("VerbaAstre", "V", 7, 2)
-    ];
-    */
+    private readonly Galaxie<Entite> _galaxie = new()
+    {
+        Entites = new List<Entite>
+        {
+            new CryptoVaisseau(
+                "CryptoVaisseau",
+                1,
+                1),
 
-    private readonly List<ElementCarte> _entites =
-    [
-        new ElementCarte("CryptoVaisseau", "C", 1, 1),
-        new ElementCarte("NovaSolara", "N", 5, 3),
-        new ElementCarte("VerbaAstre", "V", 7, 2)
-    ];
+            new NovaSolara(
+                "NovaSolara",
+                5,
+                3,
+                123),
+
+            new VerbaAstre(
+                "VerbaAstre",
+                7,
+                2)
+        }
+    };
 
     private int _index;
 
@@ -47,9 +58,20 @@ public class GestionCarte
 
             if (touche == ConsoleKey.Tab)
             {
-                _index = _selection.Suivante(_index, _entites.Count);
+                _index = _selection.Suivante(
+                    _index,
+                    _galaxie.Entites.Count);
+
                 continue;
             }
+
+            if (touche == ConsoleKey.M)
+            {
+                Communiquer();
+                continue;
+            }
+
+            Deplacer(touche);
 
             Deplacer(touche);
         }
@@ -62,12 +84,13 @@ public class GestionCarte
     {
         Console.Clear();
 
-        _carte.Afficher(_entites);
-        _menu.Afficher(_entites, _index);
+        _carte.Afficher(_galaxie.Entites);
+        _menu.Afficher(_galaxie.Entites, _index);
     }
 
     /// <summary>
-    /// Déplace l'entité sélectionnée.
+    /// Déplace l'entité sélectionnée si elle peut se déplacer
+    /// sans sortir de la mini-carte.
     /// </summary>
     /// <param name="touche">Touche directionnelle pressée.</param>
     private void Deplacer(ConsoleKey touche)
@@ -77,11 +100,63 @@ public class GestionCarte
         if ((x, y) == (0, 0))
             return;
 
-        var entite = _entites[_index];
+        var entite = _galaxie.Entites[_index];
 
-        entite.X = Math.Clamp(entite.X + x, 0, Carte.Largeur - 1);
-        entite.Y = Math.Clamp(entite.Y + y, 0, Carte.Hauteur - 1);
+        if (entite is not IDeplacement deplacement)
+            return;
 
-        _entites[_index] = entite;
+        var vitesse = entite switch
+        {
+            Vaisseau vaisseau => vaisseau.Vitesse,
+            NovaSolara => 1,
+            _ => 0
+        };
+
+        var nouvellePositionX =
+            entite.PositionX + x * vitesse;
+
+        var nouvellePositionY =
+            entite.PositionY + y * vitesse;
+
+        if (!Carte.EstDansLimites(
+                nouvellePositionX,
+                nouvellePositionY))
+        {
+            return;
+        }
+
+        deplacement.Deplacer(x, y);
+    }
+
+    /// <summary>
+    /// Permet à l'entité sélectionnée d'envoyer un message.
+    /// </summary>
+    private void Communiquer()
+    {
+        var entite = _galaxie.Entites[_index];
+
+        if (entite is not ICommunication communication)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"\n{entite.Nom} ne peut pas communiquer.");
+            Console.ResetColor();
+
+            Console.ReadKey(true);
+            return;
+        }
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write("\nMessage : ");
+        Console.ResetColor();
+
+        var message = Console.ReadLine() ?? "";
+
+        var resultat = communication.Communiquer(message);
+
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine($"Résultat : {resultat}");
+        Console.ResetColor();
+
+        Console.ReadKey(true);
     }
 }
