@@ -7,7 +7,9 @@ namespace Modeles.Galaxies;
 /// </summary>
 public class Galaxie<T> where T : Entite
 {
+    /// <summary>La Liste des entités de la galaxie.</summary>
     public List<T> Entites { get; set; } = new();
+
 
     /// <summary>
     /// Ajoute une entité dans la galaxie.
@@ -31,9 +33,7 @@ public class Galaxie<T> where T : Entite
             if (entite == reference)
                 continue;
 
-            var distance =
-                Math.Abs(entite.PositionX - reference.PositionX)
-                + Math.Abs(entite.PositionY - reference.PositionY);
+            var distance =  Math.Abs(entite.PositionX - reference.PositionX) + Math.Abs(entite.PositionY - reference.PositionY);
 
             if (distance >= plusPetiteDistance)
                 continue;

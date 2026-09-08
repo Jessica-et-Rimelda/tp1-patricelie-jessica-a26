@@ -7,16 +7,24 @@ namespace Modeles.Entites.Vaisseaux;
 /// </summary>
 public class Vaisseau : Entite, IDeplacement
 {
+    /// <summary>La luminosité de l'astre.</summary>
     public int Vitesse { get; protected set; }
 
+    ///<summary> Initialise une nouvelle instance de la classe <see cref="Vaisseau"/>.
+    /// Constructeur.
+    /// </summary>
+    /// <param name="Nom">Le nom de l'entite.</param>/// 
+    /// <param name="PositionX">La position sur l'axe des x.</param>/// 
+    /// <param name="PositionY">La position sur l'axe des y.</param>/// 
+    /// <param name="Vitesse">La luminosité de l'astre.</param>/// 
     public Vaisseau(
-        string nom,
-        int positionX,
-        int positionY,
-        int vitesse)
-        : base(nom, positionX, positionY)
+        string Nom,
+        int PositionX,
+        int PositionY,
+        int Vitesse)
+        : base(Nom, PositionX, PositionY)
     {
-        Vitesse = vitesse;
+        this.Vitesse = Vitesse;
     }
 
     /// <summary>

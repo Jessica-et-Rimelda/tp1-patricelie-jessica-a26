@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Modeles</name>
+    </assembly>
+    <members>
+        <member name="T:Modeles.Entites.Astres.Astre">
+            <summary>Represente un astre de la galaxie.</summary>
+        </member>
+        <member name="M:Modeles.Entites.Astres.Astre.#ctor(System.String,System.Int32,System.Int32)">
+            <summary> Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Astres.Astre"/>.
+             Constructeur. 
+             </summary>
+             <param name="Nom">Le nom de l'entite.</param>/// 
+             <param name="PositionX">La position sur l'axe des x.</param>/// 
+             <param name="PositionY">La position sur l'axe des y.</param>/// 
+        </member>
+        <member name="T:Modeles.Entites.Astres.NovaSolara">
+            <summary>
+            Représente une NovaSolara.
+            </summary>
+        </member>
+        <member name="P:Modeles.Entites.Astres.NovaSolara.Luminosite">
+            <summary>La luminosité de l'astre.</summary>
+        </member>
+        <member name="M:Modeles.Entites.Astres.NovaSolara.#ctor(System.String,System.Int32,System.Int32,System.Double)">
+            <summary> Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Astres.NovaSolara"/>.
+             Constructeur.
+             </summary>
+             <param name="Nom">Le nom de l'entite.</param>/// 
+             <param name="PositionX">La position sur l'axe des x.</param>/// 
+             <param name="PositionY">La position sur l'axe des y.</param>/// 
+             <param name="Luminosite">La luminosité de l'astre.</param>/// 
+        </member>
+        <member name="M:Modeles.Entites.Astres.NovaSolara.Deplacer(System.Int32,System.Int32)">
+            <summary>
+            Déplace la NovaSolara et diminue sa luminosité
+            pour chaque tranche de trois déplacements.
+            </summary>
+            <param name="x">Déplacement horizontal.</param>
+            <param name="y">Déplacement vertical.</param>
+        </member>
+        <member name="M:Modeles.Entites.Astres.NovaSolara.DeplacerSurAxe(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Effectue les déplacements sur un axe.
+            </summary>
+        </member>
+        <member name="T:Modeles.Entites.Astres.VerbaAstre">
+            <summary>
+            Représente un astre capable d'embellir les communications.
+            </summary>
+        </member>
+        <member name="M:Modeles.Entites.Astres.VerbaAstre.#ctor(System.String,System.Int32,System.Int32)">
+            <summary> Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Astres.VerbaAstre"/>.
+             Constructeur.
+             </summary>
+             <param name="Nom">Le nom de l'entite.</param>/// 
+             <param name="PositionX">La position sur l'axe des x.</param>/// 
+             <param name="PositionY">La position sur l'axe des y.</param>/// 
+        </member>
+        <member name="M:Modeles.Entites.Astres.VerbaAstre.Communiquer(System.String)">
+            <summary>
+            Embellit le message reçu.
+            </summary>
+            <param name="message">Message à communiquer.</param>
+            <returns>Message embelli.</returns>
+        </member>
+        <member name="T:Modeles.Entites.Entite">
+            <summary>Représentente une entité de la galaxie.</summary>
+        </member>
+        <member name="P:Modeles.Entites.Entite.Nom">
+            <summary>Gets or sets le nom de l'astre. </summary>
+        </member>
+        <member name="P:Modeles.Entites.Entite.PositionX">
+            <summary>Gets or sets la position sur l'axe des X.</summary>
+        </member>
+        <member name="P:Modeles.Entites.Entite.PositionY">
+            <summary>Gets or sets la position sur l'axe des Y</summary>
+        </member>
+        <member name="M:Modeles.Entites.Entite.#ctor(System.String,System.Int32,System.Int32)">
+            <summary> Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Entite"/>.
+             Constructeur.
+             </summary>
+             <param name="Nom">Le nom de l'entite.</param>/// 
+             <param name="PositionX">La position sur l'axe des x.</param>/// 
+             <param name="PositionY">La position sur l'axe des y.</param>/// 
+        </member>
+        <member name="T:Modeles.Entites.Vaisseaux.CryptoVaisseau">
+            <summary>
+            Représente un vaisseau capable de communiquer de façon cryptée.
+            </summary>
+        </member>
+        <member name="M:Modeles.Entites.Vaisseaux.CryptoVaisseau.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary> Initializes a new instance of the <see cref="T:Modeles.Entites.Vaisseaux.CryptoVaisseau"/> class.
+             Constructeur. 
+             </summary>
+             <param name="Nom">Le nom de l'entite.</param>/// 
+             <param name="PositionX">La position sur l'axe des x.</param>/// 
+             <param name="PositionY">La position sur l'axe des y.</param>/// 
+             <param name="Vitesse">La luminosité de l'astre.</param>/// 
+        </member>
+        <member name="M:Modeles.Entites.Vaisseaux.CryptoVaisseau.Communiquer(System.String)">
+            <summary>
+            Crypte le message.
+            </summary>
+            <param name="message">Message à crypter.</param>
+            <returns>Message crypté.</returns>
+        </member>
+        <member name="T:Modeles.Entites.Vaisseaux.Vaisseau">
+            <summary>
+            Représente un vaisseau du système stellaire.
+            </summary>
+        </member>
+        <member name="P:Modeles.Entites.Vaisseaux.Vaisseau.Vitesse">
+            <summary>La luminosité de l'astre.</summary>
+        </member>
+        <member name="M:Modeles.Entites.Vaisseaux.Vaisseau.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary> Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Vaisseaux.Vaisseau"/>.
+             Constructeur.
+             </summary>
+             <param name="Nom">Le nom de l'entite.</param>/// 
+             <param name="PositionX">La position sur l'axe des x.</param>/// 
+             <param name="PositionY">La position sur l'axe des y.</param>/// 
+             <param name="Vitesse">La luminosité de l'astre.</param>/// 
+        </member>
+        <member name="M:Modeles.Entites.Vaisseaux.Vaisseau.Deplacer(System.Int32,System.Int32)">
+            <summary>
+            Déplace le vaisseau selon sa vitesse.
+            </summary>
+            <param name="x">Déplacement horizontal.</param>
+            <param name="y">Déplacement vertical.</param>
+        </member>
+        <member name="T:Modeles.Galaxies.Galaxie`1">
+            <summary>
+            Représente une galaxie contenant différentes entités.
+            </summary>
+        </member>
+        <member name="P:Modeles.Galaxies.Galaxie`1.Entites">
+            <summary>La Liste des entités de la galaxie.</summary>
+        </member>
+        <member name="M:Modeles.Galaxies.Galaxie`1.AjouterEntite(`0)">
+            <summary>
+            Ajoute une entité dans la galaxie.
+            </summary>
+            <param name="entite">Entité à ajouter.</param>
+        </member>
+        <member name="M:Modeles.Galaxies.Galaxie`1.TrouverEntitePlusProche(`0)">
+            <summary>
+            Trouve l'entité la plus proche selon la distance de Manhattan.
+            </summary>
+            <param name="reference">Entité utilisée comme point de référence.</param>
+            <returns>L'entité la plus proche.</returns>
+        </member>
+        <member name="T:Modeles.Interfaces.ICommunication">
+            <summary>
+            Représente une entité capable de communiquer.
+            </summary>
+        </member>
+        <member name="M:Modeles.Interfaces.ICommunication.Communiquer(System.String)">
+            <summary>
+            Communique un message.
+            </summary>
+            <param name="message">Message à communiquer.</param>
+            <returns>Message transformé.</returns>
+        </member>
+        <member name="T:Modeles.Interfaces.IDeplacement">
+            <summary>
+            Représente une entité capable de se déplacer.
+            </summary>
+        </member>
+        <member name="M:Modeles.Interfaces.IDeplacement.Deplacer(System.Int32,System.Int32)">
+            <summary>
+            Déplace l'entité selon les valeurs X et Y reçues.
+            </summary>
+            <param name="x">Déplacement horizontal.</param>
+            <param name="y">Déplacement vertical.</param>
+        </member>
+    </members>
+</doc>

@@ -18,47 +18,32 @@ namespace AppConsole
             Console.WriteLine("--------------------------------");
 
             // 1. CryptoVaisseau
-            var crypto = new CryptoVaisseau(
-                "CryptoVaisseau",
-                1,
-                1);
+            var crypto = new CryptoVaisseau("CryptoVaisseau", 1, 1);
 
             Console.WriteLine("\n1. CryptoVaisseau");
-            Console.WriteLine(
-                $"Message : {crypto.Communiquer("À l'aide !")}");
+            Console.WriteLine($"Message : {crypto.Communiquer("À l'aide !")}");
 
             crypto.Deplacer(2, 2);
 
-            Console.WriteLine(
-                $"Position : ({crypto.PositionX}, {crypto.PositionY})");
+            Console.WriteLine($"Position : ({crypto.PositionX}, {crypto.PositionY})");
 
 
             // 2. VerbaAstre
-            var verba = new VerbaAstre(
-                "VerbaAstre",
-                5,
-                5);
+            var verba = new VerbaAstre("VerbaAstre", 5, 5);
 
             Console.WriteLine("\n2. VerbaAstre");
-            Console.WriteLine(
-                verba.Communiquer("Allo!"));
+            Console.WriteLine(verba.Communiquer("Allo!"));
 
 
             // 3. NovaSolara
-            var nova = new NovaSolara(
-                "NovaSolara",
-                10,
-                10,
-                100);
+            var nova = new NovaSolara("NovaSolara", 10, 10, 100);
 
             nova.Deplacer(-5, 2);
 
             Console.WriteLine("\n3. NovaSolara");
-            Console.WriteLine(
-                $"Position : ({nova.PositionX}, {nova.PositionY})");
+            Console.WriteLine($"Position : ({nova.PositionX}, {nova.PositionY})");
 
-            Console.WriteLine(
-                $"Luminosité : {nova.Luminosite:0.##}");
+            Console.WriteLine($"Luminosité : {nova.Luminosite:0.##}");
 
 
             // 4. Galaxie
@@ -74,25 +59,18 @@ namespace AppConsole
 
 
             // 5. Entité la plus proche
-            var astre = new VerbaAstre(
-                "Astre",
-                9,
-                9);
+            var astre = new VerbaAstre("Astre", 9, 9);
 
             var plusProche =
                 galaxie.TrouverEntitePlusProche(astre);
 
             Console.WriteLine("\n5. Entité la plus proche");
-            Console.WriteLine(
-                plusProche?.Nom ?? "Aucune entité");
+            Console.WriteLine(plusProche?.Nom ?? "Aucune entité");
 
 
             // 6. Vaisseau vitesse 2
             var vaisseau = new Vaisseau(
-                "Vaisseau",
-                20,
-                20,
-                2);
+                "Vaisseau", 20, 20, 2);
 
             vaisseau.Deplacer(-2, -2);
 
@@ -112,8 +90,7 @@ namespace AppConsole
 
             foreach (var communicant in communicants)
             {
-                Console.WriteLine(
-                    communicant.Communiquer("Super message !!!"));
+                Console.WriteLine(communicant.Communiquer("Super message !!!"));
             }
 
             Console.WriteLine("\n--------------------------------");

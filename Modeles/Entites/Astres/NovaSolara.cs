@@ -1,5 +1,6 @@
-﻿// <copyright file="Cercle.cs" company="CSTJEAN">
-// Gabriel T. St-Hilaire
+﻿// <copyright file="NovaSolara.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// 
 // </copyright>
 
 using Modeles.Interfaces;
@@ -15,16 +16,24 @@ public class NovaSolara : Astre, IDeplacement
 
     private int _deplacementsDepuisBaisse;
 
+    /// <summary>La luminosité de l'astre.</summary>
     public double Luminosite { get; protected set; }
 
+    ///<summary> Initialise une nouvelle instance de la classe <see cref="NovaSolara"/>.
+    /// Constructeur.
+    /// </summary>
+    /// <param name="Nom">Le nom de l'entite.</param>/// 
+    /// <param name="PositionX">La position sur l'axe des x.</param>/// 
+    /// <param name="PositionY">La position sur l'axe des y.</param>/// 
+    /// <param name="Luminosite">La luminosité de l'astre.</param>/// 
     public NovaSolara(
-        string nom,
-        int positionX,
-        int positionY,
-        double luminosite)
-        : base(nom, positionX, positionY)
+        string Nom,
+        int PositionX,
+        int PositionY,
+        double Luminosite)
+        : base(Nom, PositionX, PositionY)
     {
-        Luminosite = luminosite;
+        this.Luminosite = Luminosite;
     }
 
     /// <summary>
