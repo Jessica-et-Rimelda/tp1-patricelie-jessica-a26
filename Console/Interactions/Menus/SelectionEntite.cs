@@ -1,4 +1,9 @@
-﻿namespace AppConsole.Interactions;
+﻿// <copyright file="SelectionEntite.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+namespace AppConsole.Interactions;
 
 /// <summary>
 /// Gère le changement d'entité sélectionnée.

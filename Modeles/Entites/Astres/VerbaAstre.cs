@@ -1,4 +1,9 @@
-﻿using Modeles.Interfaces;
+﻿// <copyright file="VerbaAstre.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+using Modeles.Interfaces;
 
 namespace Modeles.Entites.Astres;
 

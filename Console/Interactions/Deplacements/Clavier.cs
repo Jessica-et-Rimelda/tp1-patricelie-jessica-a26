@@ -1,4 +1,9 @@
-﻿namespace AppConsole.Interactions;
+﻿// <copyright file="Clavier.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+namespace AppConsole.Interactions;
 
 /// <summary>
 /// Gère les touches utilisées par la mini-carte.

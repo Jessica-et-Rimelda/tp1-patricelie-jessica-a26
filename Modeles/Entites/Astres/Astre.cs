@@ -1,5 +1,8 @@
-﻿// <copyright file="Astre.cs" company="Patricelie Njoh Ngueng">
-// Copyright (c) PlaceholderCompany. All rights reserved.// </copyright>
+﻿// <copyright file="Astre.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
 
 namespace Modeles.Entites.Astres
 {

@@ -1,4 +1,9 @@
-﻿using Modeles.Interfaces;
+﻿// <copyright file="CryptoVaisseau.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+using Modeles.Interfaces;
 using System.Globalization;
 using System.Text;
 

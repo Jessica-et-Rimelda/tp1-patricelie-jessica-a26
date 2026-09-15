@@ -1,4 +1,9 @@
-﻿using Modeles.Entites;
+﻿// <copyright file="MenuSelection.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+using Modeles.Entites;
 using Modeles.Entites.Astres;
 using Modeles.Entites.Vaisseaux;
 

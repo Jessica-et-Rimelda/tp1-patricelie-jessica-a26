@@ -1,4 +1,9 @@
-﻿using Modeles.Entites;
+﻿// <copyright file="Galaxie.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+using Modeles.Entites;
 
 namespace Modeles.Galaxies;
 

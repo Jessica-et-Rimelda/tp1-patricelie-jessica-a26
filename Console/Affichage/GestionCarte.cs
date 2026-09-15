@@ -1,4 +1,9 @@
-﻿using AppConsole.Affichage;
+﻿// <copyright file="GestionCarte.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+using AppConsole.Affichage;
 using AppConsole.Interactions;
 using Modeles.Entites;
 using Modeles.Entites.Astres;

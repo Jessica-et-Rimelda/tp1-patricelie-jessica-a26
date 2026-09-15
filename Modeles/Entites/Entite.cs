@@ -1,4 +1,9 @@
-﻿namespace Modeles.Entites
+﻿// <copyright file="Entite.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+namespace Modeles.Entites
 {
     /// <summary>Représentente une entité de la galaxie.</summary>
     public abstract class Entite

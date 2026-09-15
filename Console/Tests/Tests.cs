@@ -1,4 +1,9 @@
-﻿using Modeles.Entites;
+﻿// <copyright file="Tests.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+using Modeles.Entites;
 using Modeles.Entites.Astres;
 using Modeles.Entites.Vaisseaux;
 using Modeles.Galaxies;
@@ -54,8 +59,7 @@ namespace AppConsole
             galaxie.AjouterEntite(nova);
 
             Console.WriteLine("\n4. Galaxie");
-            Console.WriteLine(
-                $"Nombre d'entités : {galaxie.Entites.Count}");
+            Console.WriteLine( $"Nombre d'entités : {galaxie.Entites.Count}");
 
 
             // 5. Entité la plus proche

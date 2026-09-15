@@ -1,4 +1,9 @@
-﻿namespace Modeles.Interfaces;
+﻿// <copyright file="ICommunication.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+namespace Modeles.Interfaces;
 
 /// <summary>
 /// Représente une entité capable de communiquer.

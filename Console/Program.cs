@@ -1,4 +1,9 @@
-﻿using System.Text;
+﻿// <copyright file="Program.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
+// </copyright>
+
+using System.Text;
 
 namespace AppConsole;
 
@@ -9,8 +14,7 @@ public class Program
         Console.OutputEncoding = Encoding.UTF8;
         Tests.Executer();
 
-        Console.WriteLine(
-            "\nAppuyez sur une touche pour lancer la mini-carte...");
+        Console.WriteLine("\nAppuyez sur une touche pour lancer la mini-carte...");
 
         Console.ReadKey(true);
 
