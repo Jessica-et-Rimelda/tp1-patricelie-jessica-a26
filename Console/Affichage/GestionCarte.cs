@@ -3,6 +3,8 @@
 // Patricelie Rimelda Njoh Ngueng
 // </copyright>
 
+namespace AppConsole;
+
 using AppConsole.Affichage;
 using AppConsole.Interactions;
 using Modeles.Entites;
@@ -11,19 +13,17 @@ using Modeles.Entites.Vaisseaux;
 using Modeles.Galaxies;
 using Modeles.Interfaces;
 
-namespace AppConsole;
-
 /// <summary>
 /// Gère les interactions de la mini-carte.
 /// </summary>
 public class GestionCarte
 {
-    private readonly Carte _carte = new();
-    private readonly Clavier _clavier = new();
-    private readonly MenuSelection _menu = new();
-    private readonly SelectionEntite _selection = new();
+    private readonly Carte carte = new ();
+    private readonly Clavier clavier = new ();
+    private readonly MenuSelection menu = new ();
+    private readonly SelectionEntite selection = new ();
 
-    private readonly Galaxie<Entite> _galaxie = new()
+    private readonly Galaxie<Entite> galaxie = new ()
     {
         Entites = new List<Entite>
         {
@@ -41,11 +41,11 @@ public class GestionCarte
             new VerbaAstre(
                 "VerbaAstre",
                 7,
-                2)
-        }
+                2),
+        },
     };
 
-    private int _index;
+    private int index;
 
     /// <summary>
     /// Démarre la mini-carte.
@@ -54,31 +54,33 @@ public class GestionCarte
     {
         while (true)
         {
-            Afficher();
+            this.Afficher();
 
-            var touche = _clavier.Lire();
+            var touche = this.clavier.Lire();
 
             if (touche == ConsoleKey.Q)
+            {
                 return;
+            }
 
             if (touche == ConsoleKey.Tab)
             {
-                _index = _selection.Suivante(
-                    _index,
-                    _galaxie.Entites.Count);
+                this.index = this.selection.Suivante(
+                    this.index,
+                    this.galaxie.Entites.Count);
 
                 continue;
             }
 
             if (touche == ConsoleKey.M)
             {
-                Communiquer();
+                this.Communiquer();
                 continue;
             }
 
-            Deplacer(touche);
+            this.Deplacer(touche);
 
-            Deplacer(touche);
+            this.Deplacer(touche);
         }
     }
 
@@ -89,8 +91,8 @@ public class GestionCarte
     {
         Console.Clear();
 
-        _carte.Afficher(_galaxie.Entites);
-        _menu.Afficher(_galaxie.Entites, _index);
+        this.carte.Afficher(this.galaxie.Entites);
+        this.menu.Afficher(this.galaxie.Entites, this.index);
     }
 
     /// <summary>
@@ -100,15 +102,19 @@ public class GestionCarte
     /// <param name="touche">Touche directionnelle pressée.</param>
     private void Deplacer(ConsoleKey touche)
     {
-        var (x, y) = _clavier.Direction(touche);
+        var (x, y) = this.clavier.Direction(touche);
 
         if ((x, y) == (0, 0))
+        {
             return;
+        }
 
-        var entite = _galaxie.Entites[_index];
+        var entite = this.galaxie.Entites[this.index];
 
         if (entite is not IDeplacement deplacement)
+        {
             return;
+        }
 
         var vitesse = entite switch
         {
@@ -118,10 +124,10 @@ public class GestionCarte
         };
 
         var nouvellePositionX =
-            entite.PositionX + x * vitesse;
+            entite.PositionX + (x * vitesse);
 
         var nouvellePositionY =
-            entite.PositionY + y * vitesse;
+            entite.PositionY + (y * vitesse);
 
         if (!Carte.EstDansLimites(
                 nouvellePositionX,
@@ -138,7 +144,7 @@ public class GestionCarte
     /// </summary>
     private void Communiquer()
     {
-        var entite = _galaxie.Entites[_index];
+        var entite = this.galaxie.Entites[this.index];
 
         if (entite is not ICommunication communication)
         {
@@ -154,7 +160,7 @@ public class GestionCarte
         Console.Write("\nMessage : ");
         Console.ResetColor();
 
-        var message = Console.ReadLine() ?? "";
+        var message = Console.ReadLine() ?? string.Empty;
 
         var resultat = communication.Communiquer(message);
 

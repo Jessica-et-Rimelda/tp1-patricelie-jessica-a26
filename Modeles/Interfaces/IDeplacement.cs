@@ -1,6 +1,5 @@
-﻿// <copyright file="IDeplacement.cs" company="CSTJEAN">
-// Jessica Karelle Fanguem Tchikapa
-// Patricelie Rimelda Njoh Ngueng
+﻿// <copyright file="IDeplacement.cs" company="PlaceholderCompany" author="Jessica Karelle Fanguem Tchikapa && Patricelie Rimelda Njoh Ngueng">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace Modeles.Interfaces;

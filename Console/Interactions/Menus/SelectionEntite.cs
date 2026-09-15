@@ -16,5 +16,5 @@ public class SelectionEntite
     /// <param name="index">Index actuel.</param>
     /// <param name="nombreEntites">Nombre total d'entités.</param>
     /// <returns>Nouvel index.</returns>
-    public int Suivante(int index, int nombreEntites) =>(index + 1) % nombreEntites;
+    public int Suivante(int index, int nombreEntites) => (index + 1) % nombreEntites;
 }

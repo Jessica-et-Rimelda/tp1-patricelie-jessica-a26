@@ -3,19 +3,34 @@
 // Patricelie Rimelda Njoh Ngueng
 // </copyright>
 
+namespace AppConsole.Affichage;
+
 using Modeles.Entites;
 using Modeles.Entites.Astres;
 using Modeles.Entites.Vaisseaux;
-
-namespace AppConsole.Affichage;
 
 /// <summary>
 /// Affiche la mini-carte du système stellaire.
 /// </summary>
 public class Carte
 {
+    /// <summary>La largeur de la carte.</summary>
     public const int Largeur = 10;
+
+    /// <summary>La hauteur de la carte.</summary>
     public const int Hauteur = 6;
+
+    /// <summary>
+    /// Vérifie si une position se trouve dans les limites de la carte.
+    /// </summary>
+    /// <param name="x">La position en x de l'entité.</param>
+    /// <param name="y">La position en y de l'entité.</param>
+    /// <returns> Vrai si l'entité se trouve toujours dans les limites de la carte. </returns>
+    public static bool EstDansLimites(int x, int y) =>
+        x >= 0 &&
+        x < Largeur &&
+        y >= 0 &&
+        y < Hauteur;
 
     /// <summary>
     /// Affiche les entités présentes sur la carte.
@@ -67,15 +82,6 @@ public class Carte
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.Write($"[{symbole}]");
     }
-
-    /// <summary>
-    /// Vérifie si une position se trouve dans les limites de la carte.
-    /// </summary>
-    public static bool EstDansLimites(int x, int y) =>
-        x >= 0 &&
-        x < Largeur &&
-        y >= 0 &&
-        y < Hauteur;
 
     /// <summary>
     /// Affiche la bordure de la carte.

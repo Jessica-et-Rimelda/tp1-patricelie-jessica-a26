@@ -3,13 +3,19 @@
 // Patricelie Rimelda Njoh Ngueng
 // </copyright>
 
-using System.Text;
-
 namespace AppConsole;
 
+using System.Text;
+
+/// <summary>
+/// Programme général du projet.
+/// </summary>
 public class Program
 {
-    public static void Main(string[] args)
+    /// <summary>
+    /// Point d'entrée du programme général du projet.
+    /// </summary>
+    public static void Main()
     {
         Console.OutputEncoding = Encoding.UTF8;
         Tests.Executer();

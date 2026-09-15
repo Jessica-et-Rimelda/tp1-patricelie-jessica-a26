@@ -3,11 +3,11 @@
 // Patricelie Rimelda Njoh Ngueng
 // </copyright>
 
+namespace AppConsole.Affichage;
+
 using Modeles.Entites;
 using Modeles.Entites.Astres;
 using Modeles.Entites.Vaisseaux;
-
-namespace AppConsole.Affichage;
 
 /// <summary>
 /// Affiche le menu de sélection des entités.
@@ -31,13 +31,12 @@ public class MenuSelection
         {
             var entite = entites[i];
 
-
             var symboleEntite = entite switch
             {
                 Vaisseau => "C",
                 NovaSolara => "N",
                 VerbaAstre => "V",
-                _ => ""
+                _ => string.Empty
             };
 
             var symbole = i == selection

@@ -8,4 +8,11 @@
     <DocumentationFile>E:\CEGEP-AUTOMNE-2026-PREPARATION\02_COURS\03-Structures-de-Donnees\TP1_Jessica_Patricelie\TP1_Jessica_Patricelie\Modeles\.editorconfig</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
 </Project>

@@ -3,26 +3,27 @@
 // Patricelie Rimelda Njoh Ngueng
 // </copyright>
 
-using Modeles.Interfaces;
-
 namespace Modeles.Entites.Astres;
+
+using Modeles.Interfaces;
 
 /// <summary>
 /// Représente un astre capable d'embellir les communications.
 /// </summary>
 public class VerbaAstre : Astre, ICommunication
-
-{ ///<summary> Initialise une nouvelle instance de la classe <see cref="VerbaAstre"/>.
-  /// Constructeur.
-  /// </summary>
-  /// <param name="Nom">Le nom de l'entite.</param>/// 
-  /// <param name="PositionX">La position sur l'axe des x.</param>/// 
-  /// <param name="PositionY">La position sur l'axe des y.</param>/// 
+{
+    /// <summary>
+    /// Initializes a new instance of the <see cref="VerbaAstre"/> class. Initialise une nouvelle instance de la classe <see cref="VerbaAstre"/>.
+    /// Constructeur.
+    /// </summary>
+    /// <param name="nom">Le nom de l'entite.</param>///
+    /// <param name="positionX">La position sur l'axe des x.</param>///
+    /// <param name="positionY">La position sur l'axe des y.</param>///
     public VerbaAstre(
-        string Nom,
-        int PositionX,
-        int PositionY)
-        : base(Nom, PositionX, PositionY)
+        string nom,
+        int positionX,
+        int positionY)
+        : base(nom, positionX, positionY)
     {
     }
 

@@ -1,20 +1,22 @@
-﻿// <copyright file="Astre.cs" company="CSTJEAN">
-// Jessica Karelle Fanguem Tchikapa
-// Patricelie Rimelda Njoh Ngueng
+﻿// <copyright file="Astre.cs" company="PlaceholderCompany" author="">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
-
 
 namespace Modeles.Entites.Astres
 {
     /// <summary>Represente un astre de la galaxie.</summary>
-    public class Astre: Entite
+    public class Astre : Entite
     {
-        ///<summary> Initialise une nouvelle instance de la classe <see cref="Astre"/>.
-        /// Constructeur. 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Astre"/> class.
+        /// Constructeur.
         /// </summary>
-        /// <param name="Nom">Le nom de l'entite.</param>/// 
-        /// <param name="PositionX">La position sur l'axe des x.</param>/// 
-        /// <param name="PositionY">La position sur l'axe des y.</param>/// 
-        public Astre(string Nom, int PositionX, int PositionY) :base(Nom, PositionX, PositionY) {}
+        /// <param name="nom">Le nom de l'entite.</param>///
+        /// <param name="positionX">La position sur l'axe des x.</param>///
+        /// <param name="positionY">La position sur l'axe des y.</param>///
+        public Astre(string nom, int positionX, int positionY)
+            : base(nom, positionX, positionY)
+        {
+        }
     }
 }

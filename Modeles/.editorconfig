@@ -8,29 +8,31 @@
             <summary>Represente un astre de la galaxie.</summary>
         </member>
         <member name="M:Modeles.Entites.Astres.Astre.#ctor(System.String,System.Int32,System.Int32)">
-            <summary> Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Astres.Astre"/>.
-             Constructeur. 
-             </summary>
-             <param name="Nom">Le nom de l'entite.</param>/// 
-             <param name="PositionX">La position sur l'axe des x.</param>/// 
-             <param name="PositionY">La position sur l'axe des y.</param>/// 
+            <summary>
+            Initializes a new instance of the <see cref="T:Modeles.Entites.Astres.Astre"/> class.
+            Constructeur.
+            </summary>
+            <param name="nom">Le nom de l'entite.</param>///
+            <param name="positionX">La position sur l'axe des x.</param>///
+            <param name="positionY">La position sur l'axe des y.</param>///
         </member>
         <member name="T:Modeles.Entites.Astres.NovaSolara">
             <summary>
             Représente une NovaSolara.
             </summary>
         </member>
-        <member name="P:Modeles.Entites.Astres.NovaSolara.Luminosite">
-            <summary>La luminosité de l'astre.</summary>
-        </member>
         <member name="M:Modeles.Entites.Astres.NovaSolara.#ctor(System.String,System.Int32,System.Int32,System.Double)">
-            <summary> Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Astres.NovaSolara"/>.
-             Constructeur.
-             </summary>
-             <param name="Nom">Le nom de l'entite.</param>/// 
-             <param name="PositionX">La position sur l'axe des x.</param>/// 
-             <param name="PositionY">La position sur l'axe des y.</param>/// 
-             <param name="Luminosite">La luminosité de l'astre.</param>/// 
+            <summary>
+            Initializes a new instance of the <see cref="T:Modeles.Entites.Astres.NovaSolara"/> class.
+            Constructeur.
+            </summary>
+            <param name="nom">Le nom de l'entite.</param>///
+            <param name="positionX">La position sur l'axe des x.</param>///
+            <param name="positionY">La position sur l'axe des y.</param>///
+            <param name="luminosite">La luminosité de l'astre.</param>///
+        </member>
+        <member name="P:Modeles.Entites.Astres.NovaSolara.Luminosite">
+            <summary>Gets or sets la luminosité de l'astre.</summary>
         </member>
         <member name="M:Modeles.Entites.Astres.NovaSolara.Deplacer(System.Int32,System.Int32)">
             <summary>
@@ -40,23 +42,19 @@
             <param name="x">Déplacement horizontal.</param>
             <param name="y">Déplacement vertical.</param>
         </member>
-        <member name="M:Modeles.Entites.Astres.NovaSolara.DeplacerSurAxe(System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Effectue les déplacements sur un axe.
-            </summary>
-        </member>
         <member name="T:Modeles.Entites.Astres.VerbaAstre">
             <summary>
             Représente un astre capable d'embellir les communications.
             </summary>
         </member>
         <member name="M:Modeles.Entites.Astres.VerbaAstre.#ctor(System.String,System.Int32,System.Int32)">
-            <summary> Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Astres.VerbaAstre"/>.
-             Constructeur.
-             </summary>
-             <param name="Nom">Le nom de l'entite.</param>/// 
-             <param name="PositionX">La position sur l'axe des x.</param>/// 
-             <param name="PositionY">La position sur l'axe des y.</param>/// 
+            <summary>
+            Initializes a new instance of the <see cref="T:Modeles.Entites.Astres.VerbaAstre"/> class. Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Astres.VerbaAstre"/>.
+            Constructeur.
+            </summary>
+            <param name="nom">Le nom de l'entite.</param>///
+            <param name="positionX">La position sur l'axe des x.</param>///
+            <param name="positionY">La position sur l'axe des y.</param>///
         </member>
         <member name="M:Modeles.Entites.Astres.VerbaAstre.Communiquer(System.String)">
             <summary>
@@ -68,22 +66,23 @@
         <member name="T:Modeles.Entites.Entite">
             <summary>Représentente une entité de la galaxie.</summary>
         </member>
+        <member name="M:Modeles.Entites.Entite.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Modeles.Entites.Entite"/> class.
+            Constructeur.
+            </summary>
+            <param name="nom">Le nom de l'entite.</param>///
+            <param name="positionX">La position sur l'axe des x.</param>///
+            <param name="positionY">La position sur l'axe des y.</param>///
+        </member>
         <member name="P:Modeles.Entites.Entite.Nom">
-            <summary>Gets or sets le nom de l'astre. </summary>
+            <summary>Gets le nom de l'astre. </summary>
         </member>
         <member name="P:Modeles.Entites.Entite.PositionX">
             <summary>Gets or sets la position sur l'axe des X.</summary>
         </member>
         <member name="P:Modeles.Entites.Entite.PositionY">
-            <summary>Gets or sets la position sur l'axe des Y</summary>
-        </member>
-        <member name="M:Modeles.Entites.Entite.#ctor(System.String,System.Int32,System.Int32)">
-            <summary> Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Entite"/>.
-             Constructeur.
-             </summary>
-             <param name="Nom">Le nom de l'entite.</param>/// 
-             <param name="PositionX">La position sur l'axe des x.</param>/// 
-             <param name="PositionY">La position sur l'axe des y.</param>/// 
+            <summary>Gets or sets la position sur l'axe des Y.</summary>
         </member>
         <member name="T:Modeles.Entites.Vaisseaux.CryptoVaisseau">
             <summary>
@@ -92,12 +91,12 @@
         </member>
         <member name="M:Modeles.Entites.Vaisseaux.CryptoVaisseau.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
             <summary> Initializes a new instance of the <see cref="T:Modeles.Entites.Vaisseaux.CryptoVaisseau"/> class.
-             Constructeur. 
-             </summary>
-             <param name="Nom">Le nom de l'entite.</param>/// 
-             <param name="PositionX">La position sur l'axe des x.</param>/// 
-             <param name="PositionY">La position sur l'axe des y.</param>/// 
-             <param name="Vitesse">La luminosité de l'astre.</param>/// 
+            Constructeur.
+            </summary>
+            <param name="nom">Le nom de l'entite.</param>///
+            <param name="positionX">La position sur l'axe des x.</param>///
+            <param name="positionY">La position sur l'axe des y.</param>///
+            <param name="vitesse">La luminosité de l'astre.</param>///
         </member>
         <member name="M:Modeles.Entites.Vaisseaux.CryptoVaisseau.Communiquer(System.String)">
             <summary>
@@ -111,17 +110,18 @@
             Représente un vaisseau du système stellaire.
             </summary>
         </member>
-        <member name="P:Modeles.Entites.Vaisseaux.Vaisseau.Vitesse">
-            <summary>La luminosité de l'astre.</summary>
-        </member>
         <member name="M:Modeles.Entites.Vaisseaux.Vaisseau.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
-            <summary> Initialise une nouvelle instance de la classe <see cref="T:Modeles.Entites.Vaisseaux.Vaisseau"/>.
-             Constructeur.
-             </summary>
-             <param name="Nom">Le nom de l'entite.</param>/// 
-             <param name="PositionX">La position sur l'axe des x.</param>/// 
-             <param name="PositionY">La position sur l'axe des y.</param>/// 
-             <param name="Vitesse">La luminosité de l'astre.</param>/// 
+            <summary>
+            Initializes a new instance of the <see cref="T:Modeles.Entites.Vaisseaux.Vaisseau"/> class./>
+            Constructeur.
+            </summary>
+            <param name="nom">Le nom de l'entite.</param>///
+            <param name="positionX">La position sur l'axe des x.</param>///
+            <param name="positionY">La position sur l'axe des y.</param>///
+            <param name="vitesse">La luminosité de l'astre.</param>///
+        </member>
+        <member name="P:Modeles.Entites.Vaisseaux.Vaisseau.Vitesse">
+            <summary>Gets or sets la vitesse du vaisseau.</summary>
         </member>
         <member name="M:Modeles.Entites.Vaisseaux.Vaisseau.Deplacer(System.Int32,System.Int32)">
             <summary>
@@ -134,9 +134,10 @@
             <summary>
             Représente une galaxie contenant différentes entités.
             </summary>
+            <typeparam name="T">Le type de l'entité.</typeparam>
         </member>
         <member name="P:Modeles.Galaxies.Galaxie`1.Entites">
-            <summary>La Liste des entités de la galaxie.</summary>
+            <summary>Gets or sets la Liste des entités de la galaxie.</summary>
         </member>
         <member name="M:Modeles.Galaxies.Galaxie`1.AjouterEntite(`0)">
             <summary>

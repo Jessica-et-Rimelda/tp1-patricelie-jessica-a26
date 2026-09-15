@@ -3,9 +3,9 @@
 // Patricelie Rimelda Njoh Ngueng
 // </copyright>
 
-using Modeles.Interfaces;
-
 namespace Modeles.Entites.Astres;
+
+using Modeles.Interfaces;
 
 /// <summary>
 /// Représente une NovaSolara.
@@ -13,28 +13,25 @@ namespace Modeles.Entites.Astres;
 public class NovaSolara : Astre, IDeplacement
 {
     private const int Vitesse = 1;
+    private int deplacementsDepuisBaisse;
 
-    private int _deplacementsDepuisBaisse;
-
-    /// <summary>La luminosité de l'astre.</summary>
-    public double Luminosite { get; protected set; }
-
-    ///<summary> Initialise une nouvelle instance de la classe <see cref="NovaSolara"/>.
+    /// <summary>
+    /// Initializes a new instance of the <see cref="NovaSolara"/> class.
     /// Constructeur.
     /// </summary>
-    /// <param name="Nom">Le nom de l'entite.</param>/// 
-    /// <param name="PositionX">La position sur l'axe des x.</param>/// 
-    /// <param name="PositionY">La position sur l'axe des y.</param>/// 
-    /// <param name="Luminosite">La luminosité de l'astre.</param>/// 
+    /// <param name="nom">Le nom de l'entite.</param>///
+    /// <param name="positionX">La position sur l'axe des x.</param>///
+    /// <param name="positionY">La position sur l'axe des y.</param>///
+    /// <param name="luminosite">La luminosité de l'astre.</param>///
     public NovaSolara(
-        string Nom,
-        int PositionX,
-        int PositionY,
-        double Luminosite)
-        : base(Nom, PositionX, PositionY)
-    {
-        this.Luminosite = Luminosite;
-    }
+        string nom,
+        int positionX,
+        int positionY,
+        double luminosite)
+        : base(nom, positionX, positionY) => this.Luminosite = luminosite;
+
+    /// <summary>Gets or sets la luminosité de l'astre.</summary>
+    public double Luminosite { get; protected set; }
 
     /// <summary>
     /// Déplace la NovaSolara et diminue sa luminosité
@@ -44,33 +41,14 @@ public class NovaSolara : Astre, IDeplacement
     /// <param name="y">Déplacement vertical.</param>
     public void Deplacer(int x, int y)
     {
-         // Chaque déplacement est traité une seule fois.
-        DeplacerSurAxe(Math.Abs(x), Math.Sign(x), 0);
-        DeplacerSurAxe(Math.Abs(y), 0, Math.Sign(y));
-    }
+        this.PositionX += x * Vitesse;
+        this.PositionY += y * Vitesse;
 
-    /// <summary>
-    /// Effectue les déplacements sur un axe.
-    /// </summary>
-    private void DeplacerSurAxe(
-        int nombreDeplacements,
-        int directionX,
-        int directionY)
-    {
-        for (var i = 0;
-             i < nombreDeplacements && Luminosite >= 1;
-             i++)
+        this.deplacementsDepuisBaisse++;
+
+        if (this.deplacementsDepuisBaisse % 3 == 0)
         {
-            PositionX += directionX * Vitesse;
-            PositionY += directionY * Vitesse;
-
-            _deplacementsDepuisBaisse++;
-
-            if (_deplacementsDepuisBaisse == 3)
-            {
-                Luminosite *= 0.8;
-                _deplacementsDepuisBaisse = 0;
-            }
+            this.Luminosite *= 0.8;
         }
     }
 }

@@ -3,25 +3,26 @@
 // Patricelie Rimelda Njoh Ngueng
 // </copyright>
 
-using Modeles.Entites;
-
 namespace Modeles.Galaxies;
+
+using Modeles.Entites;
 
 /// <summary>
 /// Représente une galaxie contenant différentes entités.
 /// </summary>
-public class Galaxie<T> where T : Entite
+/// <typeparam name="T">Le type de l'entité.</typeparam>
+public class Galaxie<T>
+    where T : Entite
 {
-    /// <summary>La Liste des entités de la galaxie.</summary>
-    public List<T> Entites { get; set; } = new();
-
+    /// <summary>Gets or sets la Liste des entités de la galaxie.</summary>
+    public List<T> Entites { get; set; } = new ();
 
     /// <summary>
     /// Ajoute une entité dans la galaxie.
     /// </summary>
     /// <param name="entite">Entité à ajouter.</param>
     public void AjouterEntite(T entite) =>
-        Entites.Add(entite);
+        this.Entites.Add(entite);
 
     /// <summary>
     /// Trouve l'entité la plus proche selon la distance de Manhattan.
@@ -33,15 +34,19 @@ public class Galaxie<T> where T : Entite
         T? plusProche = null;
         var plusPetiteDistance = int.MaxValue;
 
-        foreach (var entite in Entites)
+        foreach (var entite in this.Entites)
         {
             if (entite == reference)
+            {
                 continue;
+            }
 
-            var distance =  Math.Abs(entite.PositionX - reference.PositionX) + Math.Abs(entite.PositionY - reference.PositionY);
+            var distance = Math.Abs(entite.PositionX - reference.PositionX) + Math.Abs(entite.PositionY - reference.PositionY);
 
             if (distance >= plusPetiteDistance)
+            {
                 continue;
+            }
 
             plusPetiteDistance = distance;
             plusProche = entite;
