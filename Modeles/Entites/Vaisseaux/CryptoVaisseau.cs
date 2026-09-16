@@ -46,6 +46,7 @@ public class CryptoVaisseau : Vaisseau, ICommunication
         string messageSansAccent = new string(message.Normalize(NormalizationForm.FormD)
        .Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
        .ToArray());
+
         var resultat = messageSansAccent.ToCharArray();
 
         for (var i = 0; i < resultat.Length; i++)

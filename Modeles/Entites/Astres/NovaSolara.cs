@@ -41,6 +41,11 @@ public class NovaSolara : Astre, IDeplacement
     /// <param name="y">Déplacement vertical.</param>
     public void Deplacer(int x, int y)
     {
+        if (this.Luminosite < 1)
+        {
+            return;
+        }
+
         this.PositionX += x * Vitesse;
         this.PositionY += y * Vitesse;
 

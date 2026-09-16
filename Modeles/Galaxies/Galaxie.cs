@@ -21,8 +21,7 @@ public class Galaxie<T>
     /// Ajoute une entité dans la galaxie.
     /// </summary>
     /// <param name="entite">Entité à ajouter.</param>
-    public void AjouterEntite(T entite) =>
-        this.Entites.Add(entite);
+    public void AjouterEntite(T entite) => this.Entites.Add(entite);
 
     /// <summary>
     /// Trouve l'entité la plus proche selon la distance de Manhattan.

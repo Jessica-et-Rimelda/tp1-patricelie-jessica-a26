@@ -61,23 +61,20 @@ public static class Tests
         Console.WriteLine($"Nombre d'entités : {galaxie.Entites.Count}");
 
         // 5. Entité la plus proche
-        var astre = new VerbaAstre("Astre", 9, 9);
+        var astre = new Astre("Astre", 9, 9);
 
-        var plusProche =
-            galaxie.TrouverEntitePlusProche(astre);
+        var plusProche = galaxie.TrouverEntitePlusProche(astre);
 
         Console.WriteLine("\n5. Entité la plus proche");
         Console.WriteLine(plusProche?.Nom ?? "Aucune entité");
 
         // 6. Vaisseau vitesse 2
-        var vaisseau = new Vaisseau(
-            "Vaisseau", 20, 20, 2);
+        var vaisseau = new Vaisseau("Vaisseau", 20, 20, 2);
 
         vaisseau.Deplacer(-2, -2);
 
         Console.WriteLine("\n6. Vaisseau");
-        Console.WriteLine(
-            $"Position : ({vaisseau.PositionX}, {vaisseau.PositionY})");
+        Console.WriteLine($"Position : ({vaisseau.PositionX}, {vaisseau.PositionY})");
 
         // 7. Liste des communicants
         var communicants = new List<ICommunication>
