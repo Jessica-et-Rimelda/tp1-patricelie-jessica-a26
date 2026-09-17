@@ -1,4 +1,4 @@
-﻿// <copyright file="Galaxie.cs" company="CSTJEAN">
+﻿// <copyright file="Entite.cs" company="CSTJEAN">
 // Jessica Karelle Fanguem Tchikapa
 // Patricelie Rimelda Njoh Ngueng
 // </copyright>
@@ -9,7 +9,7 @@ namespace Modeles.Entites
     public abstract class Entite
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Entite"/> class.
+        /// Initialise une nouvelle instance de la classe <see cref="Entite"/>.
         /// Constructeur.
         /// </summary>
         /// <param name="nom">Le nom de l'entite.</param>///
@@ -25,10 +25,10 @@ namespace Modeles.Entites
         /// <summary>Gets le nom de l'astre. </summary>
         public string Nom { get; }
 
-        /// <summary>Gets or sets la position sur l'axe des X.</summary>
+        /// <summary>Gets ou sets de la position sur l'axe des X.</summary>
         public int PositionX { get; protected set; }
 
-        /// <summary>Gets or sets la position sur l'axe des Y.</summary>
+        /// <summary>Gets ou sets de la position sur l'axe des Y.</summary>
         public int PositionY { get; protected set; }
     }
 }

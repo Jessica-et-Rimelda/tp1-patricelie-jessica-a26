@@ -16,7 +16,7 @@ public class NovaSolara : Astre, IDeplacement
     private int deplacementsDepuisBaisse;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="NovaSolara"/> class.
+    /// Initialise une nouvelle instance de la classe <see cref="NovaSolara"/>.
     /// Constructeur.
     /// </summary>
     /// <param name="nom">Le nom de l'entite.</param>///
@@ -30,7 +30,7 @@ public class NovaSolara : Astre, IDeplacement
         double luminosite)
         : base(nom, positionX, positionY) => this.Luminosite = luminosite;
 
-    /// <summary>Gets or sets la luminosité de l'astre.</summary>
+    /// <summary>Gets ou sets de la luminosité de l'astre.</summary>
     public double Luminosite { get; protected set; }
 
     /// <summary>

@@ -1,5 +1,6 @@
-﻿// <copyright file="Vaisseau.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="Vaisseau.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
 // </copyright>
 
 namespace Modeles.Entites.Vaisseaux;
@@ -12,7 +13,7 @@ using Modeles.Interfaces;
 public class Vaisseau : Entite, IDeplacement
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="Vaisseau"/> class./>
+    /// Initialise une nouvelle instance de la classe <see cref="Vaisseau"/>.
     /// Constructeur.
     /// </summary>
     /// <param name="nom">Le nom de l'entite.</param>///
@@ -29,7 +30,7 @@ public class Vaisseau : Entite, IDeplacement
         this.Vitesse = vitesse;
     }
 
-    /// <summary>Gets or sets la vitesse du vaisseau.</summary>
+    /// <summary>Gets ou sets de la vitesse du vaisseau.</summary>
     public int Vitesse { get; protected set; }
 
     /// <summary>

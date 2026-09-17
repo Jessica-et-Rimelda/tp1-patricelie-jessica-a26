@@ -1,5 +1,6 @@
-﻿// <copyright file="Astre.cs" company="PlaceholderCompany" author="">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="Astre.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
 // </copyright>
 
 namespace Modeles.Entites.Astres
@@ -8,7 +9,7 @@ namespace Modeles.Entites.Astres
     public class Astre : Entite
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Astre"/> class.
+        /// Initialise une nouvelle instance de la classe <see cref="Astre"/>.
         /// Constructeur.
         /// </summary>
         /// <param name="nom">Le nom de l'entite.</param>///

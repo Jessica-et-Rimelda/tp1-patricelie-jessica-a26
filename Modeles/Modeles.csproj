@@ -5,7 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>annotations</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>E:\CEGEP-AUTOMNE-2026-PREPARATION\02_COURS\03-Structures-de-Donnees\TP1_Jessica_Patricelie\TP1_Jessica_Patricelie\Modeles\.editorconfig</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -13,7 +13,7 @@ using Modeles.Interfaces;
 public class VerbaAstre : Astre, ICommunication
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="VerbaAstre"/> class. Initialise une nouvelle instance de la classe <see cref="VerbaAstre"/>.
+    /// Initialise une nouvelle instance de la classe  <see cref="VerbaAstre"/>.
     /// Constructeur.
     /// </summary>
     /// <param name="nom">Le nom de l'entite.</param>///
@@ -32,6 +32,5 @@ public class VerbaAstre : Astre, ICommunication
     /// </summary>
     /// <param name="message">Message à communiquer.</param>
     /// <returns>Message embelli.</returns>
-    public string Communiquer(string message) =>
-        $"✨🌟 {message} 🌟✨";
+    public string Communiquer(string message) => $"✨🌟 {message} 🌟✨";
 }

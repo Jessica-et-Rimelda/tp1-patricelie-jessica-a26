@@ -14,13 +14,11 @@ using System.Text;
 /// </summary>
 public class CryptoVaisseau : Vaisseau, ICommunication
 {
-    private const string Alphabet =
-        "abcdefghijklmnopqrstuvwxyz";
+    private const string Alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-    private const string AlphabetCrypte =
-        "cjdoywhktgvfzelxquapmbsnri";
+    private const string AlphabetCrypte = "cjdoywhktgvfzelxquapmbsnri";
 
-    /// <summary> Initializes a new instance of the <see cref="CryptoVaisseau"/> class.
+    /// <summary>Initialise une nouvelle instance de la classe  <see cref="CryptoVaisseau"/>.
     /// Constructeur.
     /// </summary>
     /// <param name="nom">Le nom de l'entite.</param>///
@@ -43,6 +41,8 @@ public class CryptoVaisseau : Vaisseau, ICommunication
     /// <returns>Message crypté.</returns>
     public string Communiquer(string message)
     {
+        // En faisant la recherche "what does nets string normalize do?" sur internet, nous sommes tombes sur le site de StackOverflow qui nous a donné ce bout de code.
+        // Lien direct : https://stackoverflow.com/questions/3288114/what-does-nets-string-normalize-do
         string messageSansAccent = new string(message.Normalize(NormalizationForm.FormD)
        .Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
        .ToArray());

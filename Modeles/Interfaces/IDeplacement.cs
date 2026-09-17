@@ -1,11 +1,12 @@
-﻿// <copyright file="IDeplacement.cs" company="PlaceholderCompany" author="Jessica Karelle Fanguem Tchikapa && Patricelie Rimelda Njoh Ngueng">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="IDeplacement.cs" company="CSTJEAN">
+// Jessica Karelle Fanguem Tchikapa
+// Patricelie Rimelda Njoh Ngueng
 // </copyright>
 
 namespace Modeles.Interfaces;
 
 /// <summary>
-/// Représente une entité capable de se déplacer.
+/// Représente la capacité de déplacement d'une entité.
 /// </summary>
 public interface IDeplacement
 {

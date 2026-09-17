@@ -6,7 +6,7 @@
 namespace Modeles.Interfaces;
 
 /// <summary>
-/// Représente une entité capable de communiquer.
+/// Représente la capacité de communiquer d'une entité.
 /// </summary>
 public interface ICommunication
 {
